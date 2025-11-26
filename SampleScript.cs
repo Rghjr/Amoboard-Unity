@@ -9,7 +9,7 @@ using UnityEngine.Audio;
 using DG.Tweening;
 using System.Collections;
 
-public class SkrypciorV2 : MonoBehaviour
+public class SampleScript : MonoBehaviour
 {
     private string folderPath;
     private List<string> mp3Files;
@@ -20,8 +20,8 @@ public class SkrypciorV2 : MonoBehaviour
 
     [Header("Audio")]
     public GameObject audioSourcePrefab; // Prefab AudioSource do instancjonowania
-    public AudioMixer audioMixer; // Dodaj referencjê do Audio Mixer
-    private bool isEarrapeActive = false; // Zmienna do œledzenia stanu earrape
+    public AudioMixer audioMixer; // Dodaj referencjÃª do Audio Mixer
+    private bool isEarrapeActive = false; // Zmienna do Å“ledzenia stanu earrape
 
     [Header("UI")]
     public GameObject editWindow;
@@ -30,7 +30,7 @@ public class SkrypciorV2 : MonoBehaviour
     public GameObject przyciskUstawienia;
     public Button openOptionsButton;
     public Button earrapeButton; // Przycisk earrape
-    public Button refreshButton; // Przycisk odœwie¿ania kafelków
+    public Button refreshButton; // Przycisk odÅ“wieÂ¿ania kafelkÃ³w
 
     private GameObject selectedButton;
     private string selectedFilePath;
@@ -207,7 +207,7 @@ public class SkrypciorV2 : MonoBehaviour
             button.transform.DOScale(1.0f, 0.2f).SetEase(Ease.InBounce);
         });
 
-        // Animacja przechylenia (obrót wokó³ osi Z)
+        // Animacja przechylenia (obrÃ³t wokÃ³Â³ osi Z)
         button.transform.DORotate(new Vector3(0, 0, 10), 0.1f).SetEase(Ease.InOutSine).OnComplete(() =>
         {
             button.transform.DORotate(Vector3.zero, 0.1f).SetEase(Ease.InOutSine);
@@ -249,3 +249,4 @@ public class SkrypciorV2 : MonoBehaviour
         CreateWindowsForMP3Files();
     }
 }
+
